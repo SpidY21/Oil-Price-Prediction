@@ -10,11 +10,11 @@ def To_Be_Length(month, year):
     return count
 
 
-model = pickle.load(open("C:/Users/Yash/Desktop/ExcelR Project/App/RMSE_5_model.sav", 'rb'))
+model = pickle.load(open("RMSE_5_model.sav", 'rb'))
 
 
 def forecasting(month, year):
-    df = pd.read_excel(r"C:\Users\Yash\Desktop\ExcelR Project\Codes\RWTCm.xls")
+    df = pd.read_excel(r"RWTCm.xls")
     df.index.freq = 'MS'
     df.set_index('Date', inplace=True)
     train = df.iloc[:444]
